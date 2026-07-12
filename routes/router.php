@@ -8,6 +8,13 @@ $route = [
     ],
     'gerant' => [
         'dashboard' => 'dashboard',
+        'campagnes' => 'campagnes',
+        'addEvenement' => 'addEvenement',
+        'editEvenement' => 'editEvenement',
+        'addSemaine' => 'addSemaine',
+        'editSemaine' => 'editSemaine',
+        'apprenants' => 'apprenants',
+        'paiement' => 'paiement'
     ],
     
 ];
