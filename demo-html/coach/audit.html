@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Audit — Coach — Contribution Class</title>
+<link rel="stylesheet" href="../../assets/css/output.css">
+</head>
+<body class="font-body">
+<div class="min-h-screen flex bg-background">
+
+<aside class="w-68 shrink-0 border-r border-secondary-100 bg-secondary-100 flex flex-col">
+  <div class="px-5 py-5 flex items-center gap-2">
+    <div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white font-display font-bold text-sm">C</div>
+    <div>
+      <p class="font-display font-semibold text-xl text-primary leading-none">Contribution Class</p>
+    </div>
+  </div>
+
+  <div class="px-3 py-3 mt-3 ml-2 mr-2 rounded-lg flex items-center gap-2 bg-white">
+    <div class="w-12 h-12 rounded-full bg-secondary-100 flex items-center justify-center text-primary text-xs font-semibold">MD</div>
+    <div>
+      <p class="text-[15px] font-medium leading-none text-text">Birane Baila Wane</p>
+      <p class="text-[13px] font-medium text-text-muted">Coach Superviseur</p>
+    </div>
+  </div>
+
+  <nav class="flex-1 px-3 py-4 space-y-1 mt-10 gap-10">
+    <a href="dashboard.html" class="nav-link">
+      <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></svg>
+      Dashboard
+    </a>
+    <a href="suivi.html" class="nav-link">
+      <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18" stroke-linecap="round"/></svg>
+      Suivi Cotisations
+    </a>
+    <a href="campagnes.html" class="nav-link">
+      <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 10v4a1 1 0 0 0 1 1h2l4.5 3.5a1 1 0 0 0 1.6-.8V6.3a1 1 0 0 0-1.6-.8L6 9H4a1 1 0 0 0-1 1Z"/><path d="M17 8.5a5 5 0 0 1 0 7" stroke-linecap="round"/></svg>
+      Campagnes
+    </a>
+    <a href="audit.html" class="nav-link active">
+      <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5" stroke-linecap="round"/><path d="M8 11h6M11 8v6" stroke-linecap="round"/></svg>
+      Audit
+    </a>
+  </nav>
+</aside>
+
+  <div class="flex-1 flex flex-col min-w-0">
+    <header class="h-16 flex items-center justify-between px-6 border-b border-indigo-200 bg-surface shrink-0">
+      <div class="relative w-72">
+        <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5" stroke-linecap="round"/></svg>
+        <input type="text" placeholder="Search records..." class="w-full pl-9 pr-3 py-2 rounded-lg border border-gray-200 text-sm bg-background text-text placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary/30" />
+      </div>
+        <a href="../authentification/connexion.html">
+        <button
+            class="flex items-center gap-2 bg-primary hover:bg-slate-900 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="m16 17 5-5-5-5M21 12H9" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Déconnexion
+        </button>
+        </a>
+    </header>
+
+    <main class="flex-1 overflow-y-auto p-6 space-y-4">
+
+      <div class="flex items-center justify-between">
+        <div>
+          <h1 class="font-display font-semibold text-lg text-text">Audit — historique des paiements</h1>
+          <p class="text-xs text-text-muted mt-0.5">Tous les paiements enregistrés, tous apprenants confondus</p>
+        </div>
+        <button class="flex items-center gap-2 border border-gray-200 text-text text-sm font-medium px-4 py-2 rounded-lg hover:bg-background">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12M7 10l5 5 5-5" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 19h16" stroke-linecap="round"/></svg>
+          Exporter
+        </button>
+      </div>
+
+      <div class="bg-surface rounded-xl border border-gray-100">
+        <div class="flex items-center gap-3 px-5 py-4 border-b border-gray-100">
+          <div class="relative flex-1 max-w-xs">
+            <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5" stroke-linecap="round"/></svg>
+            <input type="text" placeholder="Rechercher un apprenant..." class="w-full pl-9 pr-3 py-2 rounded-lg border border-gray-200 text-sm bg-background text-text placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary/30" />
+          </div>
+          <div class="relative">
+            <select class="appearance-none pl-3 pr-8 py-2 rounded-lg border border-gray-200 bg-background text-sm text-text focus:outline-none focus:ring-2 focus:ring-primary/30">
+              <option>Tous les évènements</option>
+              <option>Semaine 14</option>
+              <option>Anniversaire</option>
+              <option>Décès</option>
+              <option>Ordinateur</option>
+            </select>
+            <svg class="absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="text-left border-b border-gray-100">
+              <th class="px-5 py-3 text-[11px] font-semibold tracking-wide text-text-muted">REFERENCE</th>
+              <th class="px-5 py-3 text-[11px] font-semibold tracking-wide text-text-muted">APPRENANT</th>
+              <th class="px-5 py-3 text-[11px] font-semibold tracking-wide text-text-muted">EVENEMENT</th>
+              <th class="px-5 py-3 text-[11px] font-semibold tracking-wide text-text-muted">DATE</th>
+              <th class="px-5 py-3 text-[11px] font-semibold tracking-wide text-text-muted">MONTANT</th>
+              <th class="px-5 py-3 text-[11px] font-semibold tracking-wide text-text-muted">SAISI PAR</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+
+            <tr class="hover:bg-background/60">
+              <td class="px-5 py-3 text-text-muted">REF0018</td>
+              <td class="px-5 py-3 font-medium text-text">Khadija Diop</td>
+              <td class="px-5 py-3 text-text-muted">Semaine 14</td>
+              <td class="px-5 py-3 text-text-muted">10/07/2026</td>
+              <td class="px-5 py-3 text-text-muted">100 Fcfa</td>
+              <td class="px-5 py-3 text-text-muted">Gérant</td>
+            </tr>
+
+            <tr class="hover:bg-background/60">
+              <td class="px-5 py-3 text-text-muted">REF0017</td>
+              <td class="px-5 py-3 font-medium text-text">Youssou Sall</td>
+              <td class="px-5 py-3 text-text-muted">Semaine 14</td>
+              <td class="px-5 py-3 text-text-muted">10/07/2026</td>
+              <td class="px-5 py-3 text-text-muted">100 Fcfa</td>
+              <td class="px-5 py-3 text-text-muted">Gérant</td>
+            </tr>
+
+            <tr class="hover:bg-background/60">
+              <td class="px-5 py-3 text-text-muted">REF0016</td>
+              <td class="px-5 py-3 font-medium text-text">Mariama Dia</td>
+              <td class="px-5 py-3 text-text-muted">Anniversaire</td>
+              <td class="px-5 py-3 text-text-muted">09/07/2026</td>
+              <td class="px-5 py-3 text-text-muted">1000 Fcfa</td>
+              <td class="px-5 py-3 text-text-muted">Gérant</td>
+            </tr>
+
+            <tr class="hover:bg-background/60">
+              <td class="px-5 py-3 text-text-muted">REF0015</td>
+              <td class="px-5 py-3 font-medium text-text">Adja Coura Ndour</td>
+              <td class="px-5 py-3 text-text-muted">Décès</td>
+              <td class="px-5 py-3 text-text-muted">08/07/2026</td>
+              <td class="px-5 py-3 text-text-muted">300 Fcfa</td>
+              <td class="px-5 py-3 text-text-muted">Gérant</td>
+            </tr>
+
+            <tr class="hover:bg-background/60">
+              <td class="px-5 py-3 text-text-muted">REF0014</td>
+              <td class="px-5 py-3 font-medium text-text">Abdou Kebe</td>
+              <td class="px-5 py-3 text-text-muted">Semaine 13</td>
+              <td class="px-5 py-3 text-text-muted">05/07/2026</td>
+              <td class="px-5 py-3 text-text-muted">100 Fcfa</td>
+              <td class="px-5 py-3 text-text-muted">Gérant</td>
+            </tr>
+
+            <tr class="hover:bg-background/60">
+              <td class="px-5 py-3 text-text-muted">REF0013</td>
+              <td class="px-5 py-3 font-medium text-text">Bajene Sene</td>
+              <td class="px-5 py-3 text-text-muted">Ordinateur</td>
+              <td class="px-5 py-3 text-text-muted">03/07/2026</td>
+              <td class="px-5 py-3 text-text-muted">250 Fcfa</td>
+              <td class="px-5 py-3 text-text-muted">Gérant</td>
+            </tr>
+
+          </tbody>
+        </table>
+
+        <div class="flex justify-center py-4 border-t border-gray-100">
+          <button class="text-xs font-medium text-text-muted hover:text-primary">Voir Plus</button>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+</body>
+</html>
