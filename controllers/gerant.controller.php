@@ -4,6 +4,7 @@ require_once(dirname(__DIR__) . "/models/gerant.model.php");
 require_once(dirname(__DIR__) . "/models/semaine.model.php");
 require_once(dirname(__DIR__) . "/models/evenement.model.php");
 require_once(dirname(__DIR__) . "/models/apprenant.model.php");
+require_once(dirname(__DIR__) . "/models/paiement.model.php");
 require_once(dirname(__DIR__) . "/services/utils/validator.php");
 
 $action = $_GET['action'] ?? 'dashboard';
@@ -220,5 +221,52 @@ function apprenants(){
 
 function paiement(){
     global $action;
+    $errors = [];
+    
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        $idApprenant = (int)($_POST["idApprenant"] ?? 0);
+        $montant = (int)($_POST["montant"] ?? 0);
+        $date = trim($_POST["date"] ?? '');
+        $contribution = trim($_POST["contribution"] ?? '');
+
+        if ($idApprenant <= 0) {
+            $errors[] = "Veuillez sélectionner un apprenant.";
+        }
+        if ($montant <= 0) {
+            $errors[] = "Le montant doit être supérieur à 0.";
+        }
+        required('date', $date, $errors);
+        if (empty($contribution)) {
+            $errors[] = "Veuillez sélectionner une cotisation (Semaine ou Événement).";
+        }
+
+        if (empty($errors)) {
+            $idSemaine = null;
+            $idEvenement = null;
+            if (strpos($contribution, "semaine_") === 0) {
+                $idSemaine = (int)str_replace("semaine_", "", $contribution);
+            } elseif (strpos($contribution, "evenement_") === 0) {
+                $idEvenement = (int)str_replace("evenement_", "", $contribution);
+            }
+
+            $newPaiement = [
+                "date" => $date,
+                "montant" => $montant,
+                "idApprenant" => $idApprenant,
+                "idSemaine" => $idSemaine,
+                "idEvenement" => $idEvenement
+            ];
+
+            savePaiement($newPaiement);
+            header("Location: index.php?controller=gerant&action=paiement");
+            exit;
+        }
+    }
+
+    $apprenants = listerApprenantsAvecNoms();
+    $semaines = listerSemaines();
+    $evenements = listerEvenements();
+    $paiementsDetails = listerPaiementsDetails();
+
     require_once(dirname(__DIR__) . "/views/gerant/paiement.php");
 }

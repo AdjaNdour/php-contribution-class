@@ -1,6 +1,7 @@
 <?php
 
 require_once(dirname(__DIR__) . "/services/utils/validator.php");
+require_once(__DIR__ . "/user.model.php");
 
 if (!isset($_SESSION["apprenants"])) {
     $_SESSION["apprenants"] = [
@@ -38,4 +39,23 @@ function rechercherApprenantParId($id): array|null{
         }
     }
     return null;
+}
+
+function listerApprenantsAvecNoms(): array {
+    $apprenants = listerApprenants();
+    $result = [];
+    foreach ($apprenants as $apprenant) {
+        $user = rechercheruserParId($apprenant["idUser"]);
+        if ($user) {
+            $apprenant["nom"] = $user["nom"];
+            $apprenant["prenom"] = $user["prenom"];
+            $apprenant["email"] = $user["email"];
+        } else {
+            $apprenant["nom"] = "Inconnu";
+            $apprenant["prenom"] = "";
+            $apprenant["email"] = "";
+        }
+        $result[] = $apprenant;
+    }
+    return $result;
 }
