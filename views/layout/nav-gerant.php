@@ -40,5 +40,9 @@
         <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 10v4a1 1 0 0 0 1 1h2l4.5 3.5a1 1 0 0 0 1.6-.8V6.3a1 1 0 0 0-1.6-.8L6 9H4a1 1 0 0 0-1 1Z"/><path d="M17 8.5a5 5 0 0 1 0 7" stroke-linecap="round"/><path d="M19.5 6a8 8 0 0 1 0 12" stroke-linecap="round"/></svg>
         Campagnes
       </a>
+      <a href="index.php?controller=gerant&action=tableauCroise" class="nav-link <?php echo ($action === 'tableauCroise') ? 'active' : ''; ?>">
+        <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3h18v18H3V3z M3 9h18 M3 15h18 M9 3v18 M15 3v18" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Tableau Croisé
+      </a>
     </nav>
   </aside>

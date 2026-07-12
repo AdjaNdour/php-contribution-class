@@ -14,7 +14,8 @@ $route = [
         'addSemaine' => 'addSemaine',
         'editSemaine' => 'editSemaine',
         'apprenants' => 'apprenants',
-        'paiement' => 'paiement'
+        'paiement' => 'paiement',
+        'tableauCroise' => 'tableauCroise'
     ],
     
 ];

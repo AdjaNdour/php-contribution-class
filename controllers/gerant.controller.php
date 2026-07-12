@@ -275,3 +275,12 @@ function paiement(){
 
     require_once(dirname(__DIR__) . "/views/gerant/paiement.php");
 }
+
+function tableauCroise(){
+    global $action;
+    $apprenants = listerApprenantsAvecNoms();
+    $semaines = listerSemaines();
+    $evenements = listerEvenements();
+    $paiements = listerPaiements();
+    require_once(dirname(__DIR__) . "/views/gerant/tableauCroise.php");
+}
