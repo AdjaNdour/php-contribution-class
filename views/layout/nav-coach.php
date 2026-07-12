@@ -1,9 +1,18 @@
-<aside class="w-68 shrink-0 border-r border-secondary-100 bg-secondary-100 flex flex-col">
-  <div class="px-5 py-5 flex items-center gap-2">
-    <div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white font-display font-bold text-sm">C</div>
-    <div>
-      <p class="font-display font-semibold text-xl text-primary leading-none">Contribution Class</p>
+<input type="checkbox" id="sidebar-toggle" class="hidden peer" />
+<label for="sidebar-toggle" class="fixed inset-0 z-40 bg-black/40 transition-opacity opacity-0 pointer-events-none peer-checked:opacity-100 peer-checked:pointer-events-auto md:hidden"></label>
+<aside class="fixed inset-y-0 left-0 z-50 w-68 border-r border-secondary-100 bg-secondary-100 flex flex-col transition-transform -translate-x-full peer-checked:translate-x-0 md:translate-x-0 md:static md:flex shrink-0">
+  <div class="px-5 py-5 flex items-center justify-between gap-2">
+    <div class="flex items-center gap-2">
+      <div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white font-display font-bold text-sm">C</div>
+      <div>
+        <p class="font-display font-semibold text-xl text-primary leading-none">Contribution Class</p>
+      </div>
     </div>
+    <label for="sidebar-toggle" class="p-2 -mr-2 text-text-muted hover:text-text md:hidden cursor-pointer rounded-lg hover:bg-white/50">
+      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+      </svg>
+    </label>
   </div>
 
 

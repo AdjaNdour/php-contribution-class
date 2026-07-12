@@ -54,7 +54,7 @@
       </div>
 
       <!-- Campagnes en cours -->
-      <div class="bg-surface rounded-xl border border-gray-100">
+      <div class="bg-surface rounded-xl border border-gray-100 overflow-x-auto">
         <div class="px-5 py-4 border-b border-gray-100">
           <h2 class="font-display font-semibold text-sm text-text">Campagnes en cours</h2>
         </div>

@@ -53,7 +53,7 @@
       </div>
 
       <!-- Historique de paiement -->
-      <div class="bg-surface rounded-xl border border-gray-100 p-4 ">
+      <div class="bg-surface rounded-xl border border-gray-100 p-4 overflow-x-auto">
         <div class="flex items-center justify-between mb-4  bg-secondary p-6 rounded-lg">
           <h2 class="font-display font-semibold text-primary text-base">Historique de paiement</h2>
           <div class="relative w-64">

@@ -33,7 +33,7 @@
         </button>
       </div>
 
-      <div class="bg-surface rounded-xl border border-gray-100">
+      <div class="bg-surface rounded-xl border border-gray-100 overflow-x-auto">
         <div class="flex items-center gap-3 px-5 py-4 border-b border-gray-100">
           <div class="relative flex-1 max-w-xs">
             <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5" stroke-linecap="round"/></svg>

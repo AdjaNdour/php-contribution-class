@@ -29,7 +29,7 @@
       </div>
 
       <!-- Table -->
-      <div class="bg-surface rounded-xl border border-gray-100 overflow-hidden">
+      <div class="bg-surface rounded-xl border border-gray-100 overflow-x-auto">
         <table class="w-full text-sm">
             <tbody class="divide-y divide-gray-100">
                 <tr class="hover:bg-background/60">
