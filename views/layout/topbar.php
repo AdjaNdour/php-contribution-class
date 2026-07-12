@@ -11,14 +11,18 @@
           <input type="text" placeholder="Search records..." class="w-full pl-9 pr-3 py-2 rounded-lg border border-gray-200 text-sm bg-background text-text placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary/30" />
         </div>
       </div>
-        <a href="../authentification/connexion.php">
-        <button
-            class="flex items-center gap-2 bg-primary hover:bg-slate-900 text-white text-sm font-medium px-3 py-2 md:px-4 rounded-lg transition-colors">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="m16 17 5-5-5-5M21 12H9" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span class="hidden sm:inline">Déconnexion</span>
-        </button>
-        </a>
+        <form action="index.php?controller=authentification&action=deconnexion" method="GET">
+            <button
+                type="submit"
+                class="flex items-center gap-2 bg-primary hover:bg-slate-900 text-white text-sm font-medium px-3 py-2 md:px-4 rounded-lg transition-colors">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="m16 17 5-5-5-5M21 12H9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="hidden sm:inline">
+                    Déconnexion
+                </span>
+            </button>
+
+        </form>
     </header>
