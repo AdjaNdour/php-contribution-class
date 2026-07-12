@@ -46,3 +46,25 @@ body {
   );
   background-size: 20px 2px;
 }
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  transition: background-color .15s ease, color .15s ease;
+}
+
+.nav-link:hover {
+  background: var(--color-white);
+  color: var(--color-primary);
+}
+
+.nav-link.active {
+  background: var(--color-indigo-200);
+  color: var(--color-primary);
+}
