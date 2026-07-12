@@ -243,7 +243,11 @@ function paiement(){
         if (empty($errors)) {
             $idSemaine = null;
             $idEvenement = null;
-            if (strpos($contribution, "semaine_") === 0) {
+            $automatique = false;
+            
+            if ($contribution === "automatique") {
+                $automatique = true;
+            } elseif (strpos($contribution, "semaine_") === 0) {
                 $idSemaine = (int)str_replace("semaine_", "", $contribution);
             } elseif (strpos($contribution, "evenement_") === 0) {
                 $idEvenement = (int)str_replace("evenement_", "", $contribution);
@@ -254,7 +258,8 @@ function paiement(){
                 "montant" => $montant,
                 "idApprenant" => $idApprenant,
                 "idSemaine" => $idSemaine,
-                "idEvenement" => $idEvenement
+                "idEvenement" => $idEvenement,
+                "automatique" => $automatique
             ];
 
             savePaiement($newPaiement);

@@ -88,6 +88,18 @@
             <label class="block text-xs font-semibold tracking-wide text-text-muted mb-3">VENTILATION (CHOISIR LA COTISATION A CRÉDITER)</label>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
               
+              <!-- Automatic ventilation card -->
+              <label class="relative flex items-center gap-2.5 border-2 border-primary bg-secondary-100 rounded-lg px-4 py-3 cursor-pointer transition">
+                <div class="w-7 h-7 rounded-md bg-white flex items-center justify-center text-primary shrink-0">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21 16-4 4-4-4M17 20V4M3 8l4-4 4 4M7 4v16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-sm font-semibold text-text">Automatique</span>
+                  <span class="text-[10px] text-text-muted">Ventile sur les semaines dues</span>
+                </div>
+                <input type="radio" name="contribution" value="automatique" checked class="absolute right-3 top-3 w-4 h-4 accent-[#4F46E5]" required />
+              </label>
+              
               <!-- Weekly contributions -->
               <?php foreach ($semaines as $semaine): ?>
                 <label class="relative flex items-center gap-2.5 border border-gray-200 hover:border-primary/40 rounded-lg px-4 py-3 cursor-pointer transition">
